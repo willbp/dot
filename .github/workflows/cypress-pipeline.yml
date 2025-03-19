@@ -1,0 +1,16 @@
+name: Cypress Tests
+on:
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
+jobs:
+    cypress-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clonar o Projeto
+              uses: actions/checkout@v4
+            - name: Instalar dependências
+              run:  npm install
+            - name: Cypress run
+              uses: cypress-io/github-action@v6
