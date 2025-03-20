@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-describe("Registro bem-sucedido de usuário", () => {
+describe("Cadastro de usuário - Sucesso", () => {
 
     const fullNameFaker = faker.person.fullName()
 

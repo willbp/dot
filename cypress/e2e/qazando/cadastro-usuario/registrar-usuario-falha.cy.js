@@ -27,7 +27,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo nome deve ser prenchido');
+            .should('contain.text', 'O campo nome deve ser prenchido')
     });
 
     it("Deve exibir erro ao tentar cadastrar apenas com campo Nome preenchido", () => {
@@ -41,7 +41,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente');
+            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente')
     });
 
     it("Deve exibir erro ao tentar cadastrar com Nome e E-mail preenchidos, mas Senha vazia", () => {
@@ -59,7 +59,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo senha deve ter pelo menos 6 dígitos');
+            .should('contain.text', 'O campo senha deve ter pelo menos 6 dígitos')
     });
 
     it("Deve exibir erro ao tentar cadastrar com Nome válido e E-mail inválido", () => {
@@ -77,7 +77,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente');
+            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente')
     });
 
     it("Deve exibir erro ao tentar cadastrar com Nome e Senha preenchidos, mas E-mail vazio", () => {
@@ -95,7 +95,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente');
+            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente')
     });
 
     it("Deve exibir erro ao tentar cadastrar com E-mail e Senha válidos", () => {
@@ -113,7 +113,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo nome deve ser prenchido');
+            .should('contain.text', 'O campo nome deve ser prenchido')
     });
 
     it("Deve exibir erro ao cadastrar com E-mail inválido e Senha válida", () => {
@@ -131,7 +131,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo nome deve ser prenchido');
+            .should('contain.text', 'O campo nome deve ser prenchido')
     });
 
     it("Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha válida", () => {
@@ -145,7 +145,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo nome deve ser prenchido');
+            .should('contain.text', 'O campo nome deve ser prenchido')
     });
 
     it("Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha inválida", () => {
@@ -159,6 +159,6 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.messages.error)
             .should('be.visible')
-            .should('contain.text', 'O campo nome deve ser prenchido');
+            .should('contain.text', 'O campo nome deve ser prenchido')
     });
 });
