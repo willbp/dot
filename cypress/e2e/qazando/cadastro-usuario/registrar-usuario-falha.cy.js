@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-describe("Validação de erros no cadastro de usuário", () => {
+describe("Cadastro de usuário - Validação de erros", () => {
 
     const elementos = {
         buttons: {
@@ -51,7 +51,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.fields.email)
             .should('be.visible')
-            .type(faker.internet.email())
+            .type(faker.internet.email().toLowerCase())
 
         cy.get(elementos.buttons.register)
             .should('be.visible')
@@ -69,7 +69,7 @@ describe("Validação de erros no cadastro de usuário", () => {
 
         cy.get(elementos.fields.email)
             .should('be.visible')
-            .type(faker.person.firstName())
+            .type(faker.word.adjective().toLowerCase())
 
         cy.get(elementos.buttons.register)
             .should('be.visible')
@@ -101,7 +101,7 @@ describe("Validação de erros no cadastro de usuário", () => {
     it("Deve exibir erro ao tentar cadastrar com E-mail e Senha válidos", () => {
         cy.get(elementos.fields.email)
             .should('be.visible')
-            .type(faker.internet.email())
+            .type(faker.internet.email().toLowerCase())
 
         cy.get(elementos.fields.password)
             .should('be.visible')
@@ -119,7 +119,7 @@ describe("Validação de erros no cadastro de usuário", () => {
     it("Deve exibir erro ao cadastrar com E-mail inválido e Senha válida", () => {
         cy.get(elementos.fields.email)
             .should('be.visible')
-            .type(faker.person.firstName())
+            .type(faker.word.adjective().toLowerCase())
 
         cy.get(elementos.fields.password)
             .should('be.visible')

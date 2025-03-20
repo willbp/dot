@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-describe("Cadastro de usuário - Sucesso", () => {
+describe("Cadastro de usuário - Sucesso com dados válidos", () => {
 
     const fullNameFaker = faker.person.fullName()
 
@@ -26,18 +26,22 @@ describe("Cadastro de usuário - Sucesso", () => {
     it("Deve cadastrar um usuário com sucesso", () => {
         cy.get(elementos.fields.name)
             .should('be.visible')
+            .should('be.enabled')
             .type(fullNameFaker)
 
         cy.get(elementos.fields.email)
             .should('be.visible')
-            .type(faker.internet.email())
+            .should('be.enabled')
+            .type(faker.internet.email().toLowerCase())
 
         cy.get(elementos.fields.password)
             .should('be.visible')
+            .should('be.enabled')
             .type(faker.internet.password({ length: 6 }))
 
         cy.get(elementos.buttons.register)
             .should('be.visible')
+            .should('be.enabled')
             .click()
 
         cy.get(elementos.messages.successTitle)
