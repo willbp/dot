@@ -1,4 +1,4 @@
-describe("Validação erros na finalização da compra - Faturamento", () => {
+describe("Finalização da compra - Validação de erros no faturamento", () => {
 
     const elementos = {
         buttons: {
@@ -7,7 +7,7 @@ describe("Validação erros na finalização da compra - Faturamento", () => {
         messages: {
             error: '.errorLabel',
         }
-    };
+    }
 
     beforeEach(() => {
         cy.accessarPaginaFinalizaCompra()
