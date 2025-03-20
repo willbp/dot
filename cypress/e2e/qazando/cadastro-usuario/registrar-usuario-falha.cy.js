@@ -133,4 +133,18 @@ describe("Validação de erros no cadastro de usuário", () => {
             .should('be.visible')
             .should('contain.text', 'O campo nome deve ser prenchido');
     });
+
+    it("Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha válida", () => {
+        cy.get(elementos.fields.password)
+            .should('be.visible')
+            .type(faker.internet.password({ length: 6 }))
+
+        cy.get(elementos.buttons.register)
+            .should('be.visible')
+            .click()
+
+        cy.get(elementos.messages.error)
+            .should('be.visible')
+            .should('contain.text', 'O campo nome deve ser prenchido');
+    });
 });
