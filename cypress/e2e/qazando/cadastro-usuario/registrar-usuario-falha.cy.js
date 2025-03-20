@@ -12,7 +12,7 @@ describe("Validação de erros no cadastro de usuário", () => {
             password: '#password'
         },
         messages: {
-            errorName: '#errorMessageFirstName',
+            error: '.errorLabel',
         }
     }
 
@@ -25,7 +25,7 @@ describe("Validação de erros no cadastro de usuário", () => {
             .should('be.visible')
             .click()
 
-        cy.get(elementos.messages.errorName)
+        cy.get(elementos.messages.error)
             .should('be.visible')
             .should('contain.text', 'O campo nome deve ser prenchido');
     });
@@ -39,8 +39,26 @@ describe("Validação de erros no cadastro de usuário", () => {
             .should('be.visible')
             .click()
 
-        cy.get(elementos.messages.errorName)
+        cy.get(elementos.messages.error)
             .should('be.visible')
             .should('contain.text', 'O campo e-mail deve ser prenchido corretamente');
+    });
+
+    it("Deve exibir erro ao tentar cadastrar com Nome e E-mail preenchidos, mas Senha vazia", () => {
+        cy.get(elementos.fields.name)
+            .should('be.visible')
+            .type(faker.person.fullName())
+
+        cy.get(elementos.fields.email)
+            .should('be.visible')
+            .type(faker.internet.email())
+
+        cy.get(elementos.buttons.register)
+            .should('be.visible')
+            .click()
+
+        cy.get(elementos.messages.error)
+            .should('be.visible')
+            .should('contain.text', 'O campo senha deve ter pelo menos 6 dígitos');
     });
 });
