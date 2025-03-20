@@ -61,4 +61,22 @@ describe("Validação de erros no cadastro de usuário", () => {
             .should('be.visible')
             .should('contain.text', 'O campo senha deve ter pelo menos 6 dígitos');
     });
+
+    it("Deve exibir erro ao tentar cadastrar com Nome válido e E-mail inválido", () => {
+        cy.get(elementos.fields.name)
+            .should('be.visible')
+            .type(faker.person.fullName())
+
+        cy.get(elementos.fields.email)
+            .should('be.visible')
+            .type(faker.person.firstName())
+
+        cy.get(elementos.buttons.register)
+            .should('be.visible')
+            .click()
+
+        cy.get(elementos.messages.error)
+            .should('be.visible')
+            .should('contain.text', 'O campo e-mail deve ser prenchido corretamente');
+    });
 });
