@@ -89,6 +89,12 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 ### Interceptar requisição e popular componente
 ✔️ Deve interceptar a api e popular o componente com novo valor
 
+<p align="center">
+  
+![Image](https://github.com/user-attachments/assets/600ac4c0-b3ef-446b-9ef9-bd617806c5e5)
+
+</p>
+
 ---
 
 ![Cypress](https://img.shields.io/badge/Cypress-14.2.0-brightgreen) ![Build](https://img.shields.io/badge/build-passing-green)
