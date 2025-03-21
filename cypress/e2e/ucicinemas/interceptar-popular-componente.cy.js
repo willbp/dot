@@ -1,12 +1,14 @@
 describe('Interceptando chamada da api e populando componente', () => {
 
-    Cypress.on("uncaught:exception", () => false)
+    Cypress.on("uncaught:exception", (err, runnable) => {
+        return false;
+    });
 
     beforeEach(() => {
         cy.visit('https://www.ucicinemas.com.br/')
     })
 
-    it('Deve interceptar a api e popular o componente com novo valor', () => {
+    it('Deve interceptar a requisição e popular o componente com novo valor', () => {
         cy.fixture('dados-desafio-intercept').then((filmes) => {
             cy.intercept('GET', 'https://www.ucicinemas.com.br/api/Filmes/ListarFilmes/cinemas/**', {
                 statusCode: 200,
