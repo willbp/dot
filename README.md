@@ -1,9 +1,9 @@
 # 🔍 Teste Técnico - Testes com Cypress
 
 ## 📖 Descrição  
-Este projeto contém testes automatizados utilizando Cypress para validar casos de teste relacionado ao cadastro de usuário e ao cadastro de um faturamento de uma compra na aplicação [automationpratice](https://automationpratice.com.br/).
+Este projeto contém testes automatizados utilizando Cypress para validar casos de teste relacionado ao cadastro de usuário e ao cadastro de um faturamento de uma compra no site [automationpratice](https://automationpratice.com.br/).
 
-Também foi executado um desafio utilizando intercept, com objetivo de interceptar uma requisição e alterar um dado coletado através de um mock, após é apresentado o dado atualizado na tela para o usuário, para este desafio foi utilizado a aplicação [ucicinemas](https://www.ucicinemas.com.br/).
+Também foi executado um desafio utilizando intercept, com objetivo de interceptar uma requisição e alterar um dado coletado através de um mock, após é apresentado o dado atualizado na tela para o usuário, para este desafio foi utilizado o site [ucicinemas](https://www.ucicinemas.com.br/).
 
 Todos os testes são executados em uma pipeline no GitHub Actions, que facilita a integração e entrega contínua, garantindo eficiência e consistência no processo de desenvolvimento dos testes.
 
@@ -71,29 +71,25 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 
 ## ✅ Casos de Teste Implementados  
 ### Cadastro de Usuário  
-✔️ Ceve cadastrar um usuário com sucesso  
-✔️ Deve exibir erro ao tentar cadastrar com todos os campos vazios  
-✔️ Veve exibir erro ao tentar cadastrar apenas com campo Nome preenchido  
-✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail preenchidos, mas Senha vazia  
-✔️ Deve exibir erro ao tentar cadastrar com Nome válido e E-mail inválido  
-✔️ Deve exibir erro ao tentar cadastrar com Nome e Senha preenchidos, mas E-mail vazio  
-✔️ Deve exibir erro ao tentar cadastrar com E-mail e Senha válidos  
-✔️ Deve exibir erro ao cadastrar com E-mail inválido e Senha válida  
-✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha válida  
-✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha inválida  
+✔️ Deve cadastrar um usuário com sucesso   
+✔️ Deve exibir erro ao tentar cadastrar com todos os campos vazios   
+✔️ Deve exibir erro ao tentar cadastrar apenas com campo Nome preenchido    
+✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail preenchidos, mas Senha vazia    
+✔️ Deve exibir erro ao tentar cadastrar com Nome válido e E-mail inválido    
+✔️ Deve exibir erro ao tentar cadastrar com Nome e Senha preenchidos, mas E-mail vazio    
+✔️ Deve exibir erro ao tentar cadastrar com E-mail e Senha válidos    
+✔️ Deve exibir erro ao cadastrar com E-mail inválido e Senha válida    
+✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha válida    
+✔️ Deve exibir erro ao tentar cadastrar com Nome e E-mail vazios e Senha inválida    
 
 ### Cadastro de Faturamento em uma Compra  
 ✔️ Deve cadastrar o faturamento com sucesso   
-✔️ Deve exibir todas as mensagens de erro ao tentar finalizar faturamento sem preencher os campos
+✔️ Deve exibir todas as mensagens de erro ao tentar finalizar faturamento sem preencher os campos   
 
-### Interceptar requisição e popular componente
-✔️ Deve interceptar a api e popular o componente com novo valor
-
-<p align="center">
+### Interceptar requisição e popular componente    
+✔️ Deve interceptar a requisição e popular o componente com novo valor    
   
 ![Image](https://github.com/user-attachments/assets/600ac4c0-b3ef-446b-9ef9-bd617806c5e5)
-
-</p>
 
 ---
 
