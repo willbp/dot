@@ -1,0 +1,32 @@
+{
+  "VITÓRIA": {
+    "Id": 10396,
+    "FilmeIdIntegracao": 11927,
+    "CodigoReferencia": 11927,
+    "NomeDestaque": "VITÓRIA",
+    "NomeDestaqueURL": "VITÓRIA",
+    "NomeEstrangeiro": "Vitória ",
+    "Duracao": "114",
+    "Genero": "Drama",
+    "Censura": "16 anos",
+    "CensuraI": "-",
+    "SiteIngresso": null,
+    "linkPublicoImagem": "/Content/Upload/Filmes/Posters/11927/filme_11927.jpg",
+    "UrlSiteCompraIngresso": "https://www.ucicinemas.com.br/Home/CinemaHorarios/11927?origem=home"
+  },
+  "TESTE INTERCEPTADO": {
+    "Id": 10432,
+    "FilmeIdIntegracao": 12847,
+    "CodigoReferencia": 12784,
+    "NomeDestaque": "TESTE INTERCEPTADO",
+    "NomeDestaqueURL": "A-MENINA-DOS-MEUS-OLHOS",
+    "NomeEstrangeiro": "You Are The Apple Of My Eyes ",
+    "Duracao": "101",
+    "Genero": "Romance",
+    "Censura": "12 anos",
+    "CensuraI": "-",
+    "SiteIngresso": null,
+    "linkPublicoImagem": "/Content/Upload/Filmes/Posters/12784/filme_12784.jpg",
+    "UrlSiteCompraIngresso": "https://www.ucicinemas.com.br/Home/CinemaHorarios/12784?origem=home"
+  }
+}
